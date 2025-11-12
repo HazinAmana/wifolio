@@ -1,0 +1,341 @@
+/* ===== LIGHTBOX CSS ===== */
+
+/* Galerie d'images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  filter: grayscale(80%);
+  aspect-ratio: 4/3;
+  background: var(--accent-color);
+  padding: 2px;
+  border: 1px solid var(--accent-color);
+}
+
+.gallery-item:hover {
+  filter: grayscale(0%);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Contenu de la lightbox */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  cursor: default;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.lightbox.active .lightbox-content {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.lightbox-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+  /* border-radius: 4px; */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px;
+  border: 1px solid var(--accent-color);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Bouton de fermeture */
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10001;
+}
+
+.lightbox-close::before,
+.lightbox-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.lightbox-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lightbox-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.lightbox-close:hover::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.lightbox-close:hover::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Flèches de navigation */
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10001;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav.prev {
+  left: 20px;
+}
+
+.lightbox-nav.next {
+  right: 20px;
+}
+
+.lightbox-nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.lightbox-nav.prev::before {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.lightbox-nav.next::before {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+/* Zones de navigation cliquables */
+.lightbox-nav-area {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+}
+
+.lightbox-nav-area.prev-area {
+  left: 0;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.lightbox-nav-area.next-area {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+/* Zone centrale pour fermer (entre les deux zones de navigation) */
+.lightbox-center-area {
+  position: fixed;
+  top: 60px;
+  bottom: 100px;
+  left: 40%;
+  right: 40%;
+  cursor: pointer;
+  z-index: 9998;
+}
+
+/* Caption et compteur */
+.lightbox-caption {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10000;
+}
+
+.lightbox-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.lightbox-counter {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Animation de transition entre images */
+.lightbox-image.fade-out {
+  animation: fadeOut 0.2s ease;
+}
+
+.lightbox-image.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading spinner */
+.lightbox-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .lightbox-close::before,
+  .lightbox-close::after {
+    width: 25px;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-nav.prev {
+    left: 10px;
+  }
+
+  .lightbox-nav.next {
+    right: 10px;
+  }
+
+  .lightbox-caption {
+    bottom: 20px;
+  }
+
+  /* Désactiver les zones de navigation étendues sur mobile */
+  .lightbox-nav-area {
+    display: none;
+  }
+
+  .lightbox-center-area {
+    display: none;
+  }
+}

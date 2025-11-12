@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Projects</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/hamburger.css">
+  <!-- <link rel="stylesheet" href="css/styles_PORTFOLIO.css" /> -->
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+
+  <!-- HEADER AVEC NAVIGATION -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo/Brand -->
+      <a href="index.html" class="logo">ThemeToggle</a>
+
+      <!-- Navigation desktop -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <ul>
+          <li><a class="border-reveal" href="index.html">Accueil</a></li>
+          <li><a class="active border-reveal" href="featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
+            <ul class="submenu">
+              <li><a class="active" aria-current="page" href="featured.html">Featured Projects</a></li>
+              <li><a href="projects.html">All Projects</a></li>
+              <li><a href="liste.html">Liste des Projets</a></li>
+            </ul>
+          </li>
+          <li><a class="border-reveal" href="map.html">Map</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton hamburger pour mobile -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-haspopup="true" aria-controls="mobile-nav">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+      <button class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+        <span class="theme-toggle-sr">Toggle theme</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="2em" height="2em" fill="var(--accent-color)" stroke-linecap="round" class="theme-toggle__classic" viewBox="0 0 32 32">
+          <clipPath id="theme-toggle__classic__cutout">
+            <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
+          </clipPath>
+          <g clip-path="url(#theme-toggle__classic__cutout)">
+            <circle cx="16" cy="16" r="9.34" />
+            <g stroke="var(--accent-color)" stroke-width="1.5">
+              <path d="M16 5.5v-4" />
+              <path d="M16 30.5v-4" />
+              <path d="M1.5 16h4" />
+              <path d="M26.5 16h4" />
+              <path d="m23.4 8.6 2.8-2.8" />
+              <path d="m5.7 26.3 2.9-2.9" />
+              <path d="m5.8 5.8 2.8 2.8" />
+              <path d="m23.4 23.4 2.9 2.9" />
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Menu de navigation mobile" role="dialog" aria-labelledby="hamburger-btn">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a class="active" aria-current="page" href="featured.html">Portfolio &ensp;</a>
+        <ul class="submenu">
+          <li><a class="active" aria-current="page" href="featured.html">Featured Projects</a></li>
+          <li><a href="projects.html">All Projects</a></li>
+          <li><a href="liste.html">Liste des Projets</a></li>
+        </ul>
+      </li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay pour fermer le menu -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main>
+
+    <section class="hero">
+      <h1>Bienvenue sur mon portfolio</h1>
+
+      </div>
+      <p class="subtitle">Découvrez quelques uns de mes projets</p>
+    </section>
+
+    <section class="featured-projects">
+      <h2 class="text-center">Projets mis en avant</h2>
+
+
+      <div id="projects-grid" class="grid"></div>
+
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <social-footer></social-footer>
+  <script src="js/social-footer.js"></script>
+  <script src="js/themeToggleClassic.js"></script>
+  <script src="js/hamburger.js"></script>
+  <script src="js/featured.js"></script>
+
+</body>
+
+</html>
