@@ -1,4 +1,5 @@
 .OLD FILES/
+.vscode/
 documents/
 .gitignore
 generate-image-list.js
