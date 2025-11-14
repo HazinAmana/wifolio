@@ -4,35 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Featured Projects</title>
+  <title>Carte des Projets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/hamburger.css">
-  <!-- <link rel="stylesheet" href="css/styles_PORTFOLIO.css" /> -->
-  <link rel="stylesheet" href="css/projects.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/map.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 </head>
 
-<body>
-
-
-  <!-- HEADER AVEC NAVIGATION -->
+<body><!-- HEADER AVEC NAVIGATION -->
   <header class="header">
     <div class="header-container">
       <!-- Logo/Brand -->
-      <a href="index.html" class="logo">ThemeToggle</a>
+      <a href="../index.html" class="logo">ThemeToggle</a>
 
       <!-- Navigation desktop -->
       <nav class="nav-desktop" aria-label="Navigation principale">
         <ul>
-          <li><a class="border-reveal" href="index.html">Accueil</a></li>
-          <li><a class="active border-reveal" href="featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
+          <li><a class="border-reveal" aria-current="page" href="../index.html">Accueil</a></li>
+          <li><a class="border-reveal" href="featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
             <ul class="submenu">
-              <li><a class="active" aria-current="page" href="featured.html">Featured Projects</a></li>
+              <li><a href="featured.html">Featured Projects</a></li>
               <li><a href="projects.html">All Projects</a></li>
               <li><a href="liste.html">Liste des Projets</a></li>
             </ul>
           </li>
-          <li><a class="border-reveal" href="map.html">Map</a></li>
+          <li><a class="active border-reveal" href="map.html">Map</a></li>
         </ul>
       </nav>
 
@@ -71,50 +72,63 @@
   <!-- MENU MOBILE -->
   <nav class="nav-mobile" id="mobile-nav" aria-label="Menu de navigation mobile" role="dialog" aria-labelledby="hamburger-btn">
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a class="active" aria-current="page" href="featured.html">Portfolio &ensp;</a>
+      <li><a aria-current="page" href="../index.html">Accueil</a></li>
+      <li><a href="featured.html">Portfolio &ensp;</a>
         <ul class="submenu">
-          <li><a class="active" aria-current="page" href="featured.html">Featured Projects</a></li>
+          <li><a href="featured.html">Featured Projects</a></li>
           <li><a href="projects.html">All Projects</a></li>
           <li><a href="liste.html">Liste des Projets</a></li>
         </ul>
       </li>
-      <li><a href="map.html">Map</a></li>
+      <li><a class="active" href="map.html">Map</a></li>
     </ul>
   </nav>
 
   <!-- Overlay pour fermer le menu -->
   <div class="nav-overlay" id="nav-overlay"></div>
 
+
   <main>
-
-    <section class="hero">
-      <h1>Bienvenue sur mon portfolio</h1>
-
+    <div class="map-page-container">
+      <div class="hero">
+        <h1>Carte des Projets</h1>
+        <p class="subtitle">Carte Interactive des Projets</p>
       </div>
-      <p class="subtitle">Découvrez quelques uns de mes projets</p>
-    </section>
-
-    <section class="featured-projects">
-      <h2 class="text-center">Projets mis en avant</h2>
-
-
-      <div id="projects-grid" class="grid"></div>
-
-
-
-    </section>
-
-
+      <div class="controls">
+        <div class="search-container">
+          <input type="text" class="search-input" id="searchInput" placeholder="Rechercher dans les Noms et Descriptions...">
+          <button class="clear-btn" id="clearBtn">✕</button>
+        </div>
+        <div class="tags-container" id="tagsContainer"></div>
+      </div>
+      <div class="project-count" id="projectCount">0 projects</div>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="project-modal" id="projectModal">
+      <div class="project-card" id="projectCard">
+        <button class="close-modal" id="closeModal">✕</button>
+        <img src="" alt="" class="project-image" id="projectImage">
+        <div class="project-content">
+          <h2 class="project-title" id="projectTitle"></h2>
+          <p class="project-description" id="projectDescription"></p>
+          <div class="project-meta">
+            <div id="projectLocation"></div>
+            <div id="projectDate"></div>
+            <a href="#" class="project-link" id="projectLink">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 
-
+  <script src="./js/map.js"></script>
   <social-footer></social-footer>
   <script src="js/social-footer.js"></script>
   <script src="js/themeToggleClassic.js"></script>
   <script src="js/hamburger.js"></script>
-  <script src="js/featured.js"></script>
 
 </body>
 
