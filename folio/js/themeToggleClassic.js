@@ -5,12 +5,6 @@
   const THEME_LIGHT = "light";
   const THEME_DARK = "dark";
 
-  // Référence DOM
-  const toggle = document.querySelector(".theme-toggle");
-
-  // Variable pour suivre l'état du thème
-  let isDarkMode = false;
-
   // Fonction pour obtenir les préférences système
   function getSystemTheme() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -18,9 +12,28 @@
       : THEME_LIGHT;
   }
 
+  // Fonction pour mettre à jour l'aria-label et le texte pour lecteurs d'écran
+  function updateThemeToggleLabel(theme) {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+    const srText = toggle.querySelector(".theme-toggle-sr");
+    if (!srText) return;
+    if (theme === THEME_DARK) {
+      toggle.setAttribute("aria-label", "Passer en mode clair");
+      toggle.setAttribute("title", "Passer en mode clair");
+      srText.textContent = "Passer en mode clair";
+    } else {
+      toggle.setAttribute("aria-label", "Passer en mode sombre");
+      toggle.setAttribute("title", "Passer en mode sombre");
+      srText.textContent = "Passer en mode sombre";
+    }
+  }
+
   // Fonction pour appliquer le thème
   function applyTheme(theme) {
-    isDarkMode = theme === THEME_DARK;
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+    const isDarkMode = theme === THEME_DARK;
 
     // Appliquer le color-scheme
     document.documentElement.style.colorScheme = theme;
@@ -35,31 +48,32 @@
     // Sauvegarder dans localStorage
     localStorage.setItem(THEME_KEY, theme);
 
-    // Mettre à jour l'aria-label
-    const nextTheme = isDarkMode ? THEME_LIGHT : THEME_DARK;
-    toggle.setAttribute("aria-label", `Passer au thème ${nextTheme}`);
-    toggle.setAttribute("title", `Passer au thème ${nextTheme}`);
+    // Mettre à jour l'accessibilité
+    updateThemeToggleLabel(theme);
+  }
+
+  // Fonction pour obtenir le thème courant
+  function getCurrentTheme() {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme) return savedTheme;
+    return getSystemTheme();
   }
 
   // Fonction pour basculer le thème
   function toggleTheme() {
-    const newTheme = isDarkMode ? THEME_LIGHT : THEME_DARK;
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK;
     applyTheme(newTheme);
   }
 
   // Initialisation
   function init() {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const savedTheme = localStorage.getItem(THEME_KEY);
 
     // Déterminer le thème initial
-    let initialTheme;
-    if (savedTheme) {
-      initialTheme = savedTheme;
-    } else {
-      initialTheme = getSystemTheme();
-    }
-
+    const initialTheme = getCurrentTheme();
     applyTheme(initialTheme);
 
     // Écouter les clics sur le bouton
