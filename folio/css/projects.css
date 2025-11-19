@@ -1,184 +1,10 @@
 /* ===================================
-  OUTILS (TOOLBAR)
+  PROJECTS.CSS - Projects Page Specific Styles
 =================================== */
-.toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.spacer {
-  flex: 1 1 auto;
-}
-
-label,
-select {
-  font-size: 14px;
-}
-
-select {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: var(--card-bg);
-  color: inherit;
-}
 
 /* ===================================
-  FILTRES PAR CATÉGORIE
+  CARD ENHANCEMENTS FOR PROJECTS
 =================================== */
-
-#filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 2rem 0;
-}
-
-.tag {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: light-dark(var(--grey-150), var(--grey-850));
-  color: light-dark(var(--grey-700), var(--grey-300));
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.tag.active {
-  background: var(--accent-color);
-  color: light-dark(var(--grey-050), var(--grey-900));
-}
-
-/* ===================================
-  RECHERCHE
-=================================== */
-
-.search-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 500px;
-}
-
-.search-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-#search-input {
-  width: 100%;
-  padding: 12px 32px 12px 32px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: var(--card-bg);
-  color: inherit;
-}
-
-#search-input::placeholder {
-  color: #999;
-}
-
-#search-input:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-#search-input:focus::placeholder {
-  color: transparent;
-}
-
-#clear-search {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
-  padding: 0;
-  line-height: 1;
-}
-
-#clear-search svg {
-  transition: transform 0.2s ease, stroke 0.2s ease;
-}
-
-#clear-search:hover svg {
-  transform: scale(1.5);
-}
-
-#clear-search:hover svg path {
-  stroke: #ff0000;
-}
-
-/* ===================================
-  PAGINATION
-=================================== */
-
-#pagination {
-  display: flex;
-  gap: 0.8rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.page-btn {
-  padding: 6px 10px;
-  background: var(--accent-color-muted);
-  color: light-dark(var(--grey-900), var(--grey-050));
-  font-size: 1rem;
-  border-radius: 4px;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.page-btn:hover:not([disabled]) {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.page-btn[disabled] {
-  background: var(--accent-color-muted);
-  color: light-dark(var(--grey-400), var(--grey-500));
-  cursor: default;
-}
-
-.page-num {
-  background: var(--accent-color-muted);
-  color: light-dark(var(--grey-900), var(--grey-050));
-  font-weight: bold;
-}
-
-.page-num.active {
-  background: var(--accent-color-muted);
-  color: light-dark(var(--grey-900), var(--grey-050));
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-/* ******** STATUT ******** */
-.status {
-  margin-top: 1rem;
-  color: light-dark(var(--grey-800), var(--grey-200));
-  font-size: 0.9em;
-  text-align: center;
-}
 
 .card-link {
   text-decoration: none;
@@ -215,38 +41,13 @@ select {
   grid-template-columns: repeat(3, 1fr);
 }
 
-
 /* ===================================
   RESPONSIVE
 =================================== */
 
 @media (max-width: 930px) {
   .grid {
-  grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .toolbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-wrapper {
-    max-width: 100%;
-  }
-
-  .spacer {
-    display: none;
-  }
-
-  #pagination {
-    gap: 0.5rem;
-  }
-
-  .page-btn {
-    padding: 4px 8px;
-    font-size: 0.9rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -255,3 +56,37 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================================
+  PROGRESS SMOOTH BACK TO TOP BUTTON
+=================================== */
+
+#progress {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: var(--primary-color-dark);
+}
+
+/* ===================================
+  END OF PROGRESS SMOOTH BACK TO TOP BUTTON
+=================================== */

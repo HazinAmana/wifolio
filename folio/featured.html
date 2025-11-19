@@ -25,14 +25,18 @@
       <nav class="nav-desktop" aria-label="Navigation principale">
         <ul>
           <li><a class="border-reveal" href="../index.html">Accueil</a></li>
-          <li><a class="active border-reveal" href="featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
+          <li><a class="active border-reveal" aria-current="page" href="featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
             <ul class="submenu">
               <li><a href="projects.html">Tous les Projets</a></li>
               <li><a href="liste.html">Liste des Projets</a></li>
               <li><a href="map.html">Carte des Projets</a></li>
             </ul>
           </li>
-          <li><a class="border-reveal" href="../books/booksIndex.html">Livres</a></li>
+          <li><a class="border-reveal" href="../books/booksIndex.html">Livres&nbsp;<span class="deroulant">▼</span></a>
+            <ul class="submenu">
+              <li><a href="../books/html/booksGallery.html">Sélection</a></li>
+            </ul>
+          </li>
           <!-- <li><a class="border-reveal" href="map.html">Carte des Projets</a></li> -->
         </ul>
       </nav>
@@ -80,7 +84,10 @@
           <li><a href="map.html">Carte des Projets</a></li>
         </ul>
       </li>
-      <li><a href="../books/booksIndex.html">Livres</a></li>
+      <li><a href="../books/booksIndex.html">Livres</a>
+        <ul class="submenu">
+          <li><a href="../books/html/booksGallery.html">Sélection</a></li>
+      </li>
       <!-- <li><a href="map.html">Carte des Projets</a></li> -->
     </ul>
   </nav>
@@ -101,7 +108,7 @@
       <h2 class="text-center">Projets mis en avant</h2>
 
 
-      <div id="projects-grid" class="grid"></div>
+      <div id="projects-grid" class="grid" data-mode="featured"></div>
 
 
 
@@ -116,7 +123,7 @@
   <script src="js/social-footer.js"></script>
   <script src="js/themeToggleClassic.js"></script>
   <script src="js/hamburger.js"></script>
-  <script src="js/featured.js"></script>
+  <script src="js/projects-manager.js"></script>
 
 </body>
 

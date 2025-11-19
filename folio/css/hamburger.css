@@ -260,7 +260,7 @@ a.border-reveal.active::after {
   border: none;
 }
 
-.nav-mobile .submenu li {
+.nav-mobile ~ .submenu ~ li {
   padding: 0 2rem 0 2rem;
   font-size: .8rem;
   border: none;
@@ -268,7 +268,6 @@ a.border-reveal.active::after {
 
 .nav-mobile a {
   text-decoration: none;
-  /* color: #333; */
   color: light-dark(var(--grey-850), var(--grey-050));
   font-size: 1.2rem;
   font-weight: 500;

@@ -8,7 +8,6 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <link rel="stylesheet" href="../folio/css/styles.css" />
   <link rel="stylesheet" href="../folio/css/hamburger.css">
-  <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
   <link rel="stylesheet" href="css/booksLinks.css" />
 </head>
 
@@ -29,7 +28,11 @@
               <li><a href="../folio/map.html">Carte des Projets</a></li>
             </ul>
           </li>
-          <li><a class="active border-reveal" href="booksIndex.html">Livres</a></li>
+          <li><a class="active border-reveal" href="booksIndex.html">Livres&nbsp;<span class="deroulant">▼</span></a>
+            <ul class="submenu">
+              <li><a aria-current="page" href="html/booksGallery.html">Sélection</a></li>
+            </ul>
+          </li>
           <!-- <li><a class="border-reveal" href="folio/map.html">Carte des Projets</a></li> -->
         </ul>
       </nav>
@@ -68,15 +71,18 @@
   <!-- MENU MOBILE -->
   <nav class="nav-mobile" id="mobile-nav" aria-label="Menu de navigation mobile" role="dialog" aria-labelledby="hamburger-btn">
     <ul>
-      <li><a aria-current="page" href="../index.html">Accueil</a></li>
-      <li><a href="../folio/featured.html">Portfolio &ensp;</a>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../folio/featured.html">Portfolio&ensp;</a>
         <ul class="submenu">
           <li><a href="../folio/projects.html">Tous les Projets</a></li>
           <li><a href="../folio/liste.html">Liste des Projets</a></li>
           <li><a href="../folio/map.html">Carte des Projets</a></li>
         </ul>
       </li>
-      <li><a class="active" href="booksIndex.html">Livres</a></li>
+      <li><a class="active" aria-current="page" href="booksIndex.html">Livres</a>
+        <ul class="submenu">
+          <li><a href="html/booksGallery.html">Sélection</a></li>
+      </li>
       <!-- <li><a href="folio/map.html">Carte des Projets</a></li> -->
     </ul>
   </nav>

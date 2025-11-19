@@ -28,9 +28,28 @@ function openMenu() {
   // Empêcher le scroll du body quand le menu est ouvert
   document.body.style.overflow = "hidden";
 
-  // Focus sur le premier lien pour l'accessibilité
+  // --- MODIFICATION : GESTION DE L'ACTIF ET DU FOCUS ---
+
+  // 1. Récupérer l'URL actuelle complète
+  const currentUrl = window.location.href;
+  let indexToFocus = 0; // Par défaut, on focus le 1er lien si aucune correspondance
+
+  mobileNavLinks.forEach((link, index) => {
+    // On retire la classe active de tous les liens par sécurité
+    link.classList.remove("active");
+    link.removeAttribute("aria-current");
+
+    // On compare l'URL du lien (link.href est absolu) avec l'URL courante
+    if (link.href === currentUrl) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page"); // Bonnes pratiques d'accessibilité
+      indexToFocus = index;
+    }
+  });
+
+  // 2. Focus sur le lien correspondant à la page active (ou le premier par défaut)
   setTimeout(() => {
-    mobileNavLinks[0].focus();
+    mobileNavLinks[indexToFocus].focus();
   }, 100);
 }
 
@@ -133,10 +152,11 @@ document.addEventListener("click", (e) => {
 /**
  * Amélioration de la performance avec la détection de support
  */
-if ("CSS" in window && "supports" in window.CSS) {
-  // Vérifier le support du backdrop-filter
-  if (!CSS.supports("backdrop-filter", "blur(10px)")) {
-    // Ajouter une classe fallback pour les navigateurs sans support
-    document.documentElement.classList.add("no-backdrop-filter");
-  }
+if (
+  "CSS" in window &&
+  "supports" in window.CSS &&
+  !CSS.supports("backdrop-filter", "blur(10px)")
+) {
+  // Vérifier le support du backdrop-filter et ajouter une classe fallback pour les navigateurs sans support
+  document.documentElement.classList.add("no-backdrop-filter");
 }

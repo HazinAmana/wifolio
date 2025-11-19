@@ -1,13 +1,13 @@
-h1 {
-  margin: 0 0 12px;
-  color: var(--accent-color);
-}
+/* ===================================
+   MAP.CSS - Map Page Specific Styles
+=================================== */
 
 .subtitle {
   font-size: 1.125rem;
   color: #94a3b8;
   margin-bottom: 2rem;
 }
+
 
 .controls {
   display: flex;

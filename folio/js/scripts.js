@@ -1,37 +1,4 @@
 // ++++++++++++++++++++++++++++++++++++++++++
-// MENU HAMBURGER
-// ++++++++++++++++++++++++++++++++++++++++++
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector(".nav-menu");
-// const navLink = document.querySelectorAll(".nav-link");
-
-// hamburger.addEventListener("click", mobileMenu);
-// navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-// function mobileMenu() {
-//   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
-// }
-
-// function closeMenu() {
-//   hamburger.classList.remove("active");
-//   navMenu.classList.remove("active");
-// }
-
-// Récupère l'URL actuelle sans le domaine
-// const currentPath = window.location.pathname.split("/").pop();
-
-// Sélectionne tous les liens de la barre de navigation
-// const navLinks = document.querySelectorAll("nav a");
-
-// navLinks.forEach((link) => {
-//   const linkPath = link.getAttribute("href");
-//   if (linkPath === currentPath) {
-//     link.classList.add("active");
-//   }
-// });
-
-// ++++++++++++++++++++++++++++++++++++++++++
 // FONCTION DE RECHERCHE AMÉLIORÉE
 // ++++++++++++++++++++++++++++++++++++++++++
 function performSearch(searchTerm) {
