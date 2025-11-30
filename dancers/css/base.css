@@ -152,6 +152,7 @@ header.nycDanceProject {
   padding: var(--spacing-lg) var(--spacing-xl);
   border-bottom: 2px solid var(--color-border);
   width: 100%;
+  text-align: center;
 }
 
 /* Main content - ⚠️ flex: 1 est CRITIQUE */
