@@ -1,0 +1,617 @@
+[
+  {
+    "Groupe": "Default",
+    "Dancers": [
+      {
+        "Nom": "NYC Dance Project",
+        "Description": [
+          "<p>NYC Dance Project was created by the husband and wife team of Ken Browar and Deborah Ory, who live in Brooklyn, New York. Ken was a fashion photographer, and Deborah brings to the project a background in dance and editorial photography. Together, they created the project to showcase the wonderful world of dance and dancers, centered in New York City. Ken’s passion for dance began when he lived in Paris and photographed dancers from the Paris Opera Ballet.</p><p>Deborah has been a dancer since she was 7 and she began her photography career when injured as a dancer—she started photographing the rehearsals she could not be in due to her injury. After moving to New York City and working as a Photography Editor at magazines such as House & Garden, Mirabella and others, she began shooting editorial work for publications and advertising work.</p><p>NYC Dance Project is a collaboration between Deborah and Ken and merges their experiences and creative passions to create unique and beautiful portraits of the dance community. The project is not just a collaboration between the photographers, but is also one with their subjects.  Each shoot is prepared as though it were its own dance production, with attention paid to every detail - the movement, lighting and the feeling each photograph evokes.</p><p>NYC Dance Project has been featured in many magazines, including in Harper’s Bazaar, Italian Vogue and Dior Magazine. Their work has been featured internationally in press such as CNN, The NY Times, The Washington Post, The Guardian, The London Times, and many others. Ken and Deborah’s photography book on dance, The Art of Movement, was published in 2016, and a sequel about the intersection of fashion and dance, The Style of Movement: Fashion and Dance, was published in 2019.  Both books have won International Photography Awards and have been bestsellers on Amazon and other bookstores. The work is also featured in the books Her Dior and Harper’s Bazaar 100 years.</p><p>Ken Browar and Deborah Ory have had their work exhibited worldwide and have their work represented by several galleries and museums.  Their work was featured in solo exhibitions at the Lanoue Gallery in Boston, the Holden Luntz Gallery in Palm Beach and at the Hunter Museum in Chattanooga, Tennessee.  They are currently working on a new book for the 100th year anniversary of the Martha Graham Dance Company.</p>"
+        ],
+        "Images": ["Ken_Browar_and_Deborah_Ory.webp", "NYC_Dance_Project.webp"]
+      }
+    ]
+  },
+  {
+    "Groupe": "Women",
+    "Dancers": [
+      {
+        "Nom": "WOMEN",
+        "Description": [""],
+        "Images": ["Women.webp"]
+      },
+      {
+        "Nom": "Ashley Ellis",
+        "Description": [
+          "<p>Principal dancer, Boston Ballet</p><p>\"Being a dancer is a such a rewarding profession, but it does not come without a lot of hard work. So f you really love it, then go for it. Try to take inspiration from all around you and never stop learning and growing. Being a dancer is not just about the physical accomplishments, but about what you can share with the audiences.\"</p>"
+        ],
+        "Images": [
+          "Ashley_Ellis_01.webp",
+          "Ashley_Ellis_02.webp",
+          "Ashley_Ellis_03.webp",
+          "Ashley_Ellis_08.webp"
+        ]
+      },
+      {
+        "Nom": "Cassandra Trenary",
+        "Description": [
+          "<p>\"My family didn't have a background in dance, but somehow they supported and trusted the 12 year old me 100 percent of the way when I decided to put dance first in my life.\" - Cassandra Trenary, Soloist, American Ballet Theatre</p>"
+        ],
+        "Images": [
+          "Cassandra_Trenary_01.webp",
+          "Cassandra_Trenary_02.webp",
+          "Cassandra_Trenary_04.webp",
+          "Cassandra_Trenary_05.webp"
+        ]
+      },
+      {
+        "Nom": "Celine Cassone",
+        "Description": [
+          "<p>\"Give it all or don't do it\" - Celine Cassone, Les Ballets Jazz de Montreal</p>"
+        ],
+        "Images": ["Celine_Cassone_01.webp"]
+      },
+      {
+        "Nom": "Charlotte Landreau",
+        "Description": [
+          "<p>Soloist, Martha Graham Dance Company</p><p>\"When you go on stage, you're giving emotions to the world, you can express your inner world, become a goddess, die and then kill, transform yourself over and over again. I would say don't be afraid to throw your soul to your audience, if you want to become a dancer.\"</p>"
+        ],
+        "Images": [
+          "Charlotte_Landreau_01.webp",
+          "Charlotte_Landreau_02.webp",
+          "Charlotte_Landreau_03.webp",
+          "Charlotte_Landreau_04.webp",
+          "Charlotte_Landreau_05.webp"
+        ]
+      },
+      {
+        "Nom": "Christine Shevchenko",
+        "Description": [
+          "<p>Christine Shevchenko, Principal dancer, American Ballet Theatre</p>"
+        ],
+        "Images": [
+          "Christine_Shevchenko_01.webp",
+          "Christine_Shevchenko_02.webp",
+          "Christine_Shevchenko_03.webp"
+        ]
+      },
+      {
+        "Nom": "Fana Tesfagiorgis",
+        "Description": [
+          "<p>Alvin Ailey American Dance Theatre</p><p>\"I wish more people knew what it felt like to actually dance. I'm not referring to the difficulty of learning a technique or a combination. I mean the part that comes after everything clicks. When your most focused mind, your most moldable body, and your truest spirit all intertwine at their highest level. That point will look different for everyone, of course, but I wish everyone could attempt to reach it at least once. It can literally feel like flying.\"</p>"
+        ],
+        "Images": [
+          "Fana_Tesfagiorgis_01.webp",
+          "Fana_Tesfagiorgis_02.webp",
+          "Fana_Tesfagiorgis_03.webp",
+          "Fana_Tesfagiorgis_04.webp",
+          "Fana_Tesfagiorgis_05.webp"
+        ]
+      },
+      {
+        "Nom": "Gillian Murphy",
+        "Description": [
+          "<p>Principal dancer, American Ballet Theatre</p><p>\"I think that if you grasp at happiness, it can be particularily elusive, so my idea of perfect happiness is to take pleasure in simple moments and gestures and to spend time with my loved ones.\"</p>"
+        ],
+        "Images": [
+          "Gillian_Murphy_01.webp",
+          "Gillian_Murphy_02.webp",
+          "Gillian_Murphy_03.webp",
+          "Gillian_Murphy_04.webp",
+          "Gillian_Murphy_05.webp"
+        ]
+      },
+      {
+        "Nom": "Hee Seo",
+        "Description": ["<p>Principal dancer, American Ballet Theatre</p>"],
+        "Images": ["Hee_Seo_01.webp", "Hee_Seo_02.webp", "Hee_Seo_03.webp"]
+      },
+      {
+        "Nom": "Holly Dorger",
+        "Description": [
+          "<p>\"The best thing you can do if you want to dance, it just concentrate on yourself and keep striving for your own personal best.\" - Principal, Royal Danish Ballet</p>"
+        ],
+        "Images": [
+          "Holly_Dorger_01.webp",
+          "Holly_Dorger_02.webp",
+          "Holly_Dorger_03.webp"
+        ]
+      },
+      {
+        "Nom": "Indiana Woodward",
+        "Description": [
+          "<p>Indiana Woodward, Soloist, New York City Ballet</p>"
+        ],
+        "Images": ["Indiana_Woodward_01.webp", "Indiana_Woodward_02.webp"]
+      },
+      {
+        "Nom": "Isabella Bolyston",
+        "Description": [
+          "<p>“I think some people think of ballerinas almost the same way they think of vampires. Like they think we are a weird mythological creature or something, not like a real person that exists in society\"</p>"
+        ],
+        "Images": [
+          "Isabella_Bolyston_01.webp",
+          "Isabella_Bolyston_02.webp",
+          "Isabella_Bolyston_03.webp"
+        ]
+      },
+      {
+        "Nom": "Jacqueline Green",
+        "Description": [
+          "<p>Alvin Ailey American Dance Theatre</p><p>\"If I could be any animal, I would chose a bird. They experience lit from two different points of view: above or below us. I want to be able to fly and also be grounded.\"</p>"
+        ],
+        "Images": [
+          "Jacqueline_Green_01.webp",
+          "Jacqueline_Green_02.webp",
+          "Jacqueline_Green_03.webp",
+          "Jacqueline_Green_04.webp"
+        ]
+      },
+      {
+        "Nom": "Lauren Lovette",
+        "Description": [
+          "<p>\"I don't get nervous as much anymore. I feel like the day Peter Martins promoted me to soloist was the day I found what I needed. It was someone telling me, I am validating you as you are for who you are as an artist - and that's enough. It gave me confidence because it made me feel like I could be myself, and I don't have to look like anybody else. I can just be Lauren, and that's enough.\" - Lauren Lovette, Principal dancer, New York City Ballet</p>"
+        ],
+        "Images": ["Lauren_Lovette_01.webp", "Lauren_Lovette_02.webp"]
+      },
+      {
+        "Nom": "Masha Dashkina Maddux",
+        "Description": [
+          "<p>\"Remember that there is something unique about you that brought you to dance in the first place. It is more than worth your time to explore why.\" -</p><p>Masha Dashkina Maddux, Principal dancer, Martha Graham Dance Company</p>"
+        ],
+        "Images": [
+          "Masha_Dashkina_Maddux_01.webp",
+          "Masha_Dashkina_Maddux_02.webp",
+          "Masha_Dashkina_Maddux_03.webp"
+        ]
+      },
+      {
+        "Nom": "Meaghan Grace Hinkis",
+        "Description": [
+          "<p>Soloist, The Royal Ballet</p><p>\"Watch and learn. Learn what to do and what not to do.\" I think about those words daily. I watch rehearsals and performances and am always learning. Everyday we can learn, and it may be surprising who you can gain the most knowledge from.\"</p>"
+        ],
+        "Images": [
+          "Meaghan_Grace_Hinkis_01.webp",
+          "Meaghan_Grace_Hinkis_02.webp",
+          "Meaghan_Grace_Hinkis_03.webp"
+        ]
+      },
+      {
+        "Nom": "Michelle Dorrance",
+        "Description": [""],
+        "Images": ["Michelle_Dorrance_01.webp", "Michelle_Dorrance_02.webp"]
+      },
+      {
+        "Nom": "Miriam Miller",
+        "Description": [
+          "<p>New York City Ballet</p><p>\"Having confidence in yourself will help you become a stronger dancer. It's not about being conceited or worrying about whether you are good enough, but feeling focused and confident about your dancing. This will improve your artistry and presence and help you stand out more. Also, having confidence allows you to take more risks and realize your full potential.\"</p>"
+        ],
+        "Images": [
+          "Miriam_Miller_01.webp",
+          "Miriam_Miller_02.webp",
+          "Miriam_Miller_03.webp",
+          "Miriam_Miller_04.webp",
+          "Miriam_Miller_05.webp",
+          "Miriam_Miller_06.webp"
+        ]
+      },
+      {
+        "Nom": "Misa Kuranag",
+        "Description": [""],
+        "Images": [
+          "MIsa_Kuranag_01.webp",
+          "MIsa_Kuranag_02.webp",
+          "MIsa_Kuranag_03.webp"
+        ]
+      },
+      {
+        "Nom": "Misty Copeland",
+        "Description": [
+          "<p>Principal dancer, American Ballet Theatre. Dancing with Alexandre Hammoudi, Principal with American Ballet Theatre</p><p>\"After dancing Swan Lake, you feel like you can conquer the world.\"</p>"
+        ],
+        "Images": [
+          "Misty_Copeland_01.webp",
+          "Misty_Copeland_02.webp",
+          "Misty_Copeland_03.webp",
+          "Misty_Copeland_04.webp",
+          "Misty_Copeland_05.webp",
+          "Misty_Copeland_06.webp",
+          "Misty_Copeland_07.webp",
+          "Misty_Copeland_08.webp"
+        ]
+      },
+      {
+        "Nom": "Nayara Lopes",
+        "Description": [
+          "<p>Pennsylvania Ballet</p><p>\"If I could chose to dance with anyone, I would choose to dance with Sterling Baca from American Ballet Theatr. He is not only my friend, but he is a true artist in my eyes, a great partner and a great person.\"</p>"
+        ],
+        "Images": ["Nayara_Lopes_01.webp", "Nayara_Lopes_02.webp"]
+      },
+      {
+        "Nom": "PeiJu Chien-Pott",
+        "Description": ["<p>Principal dancer, Martha Graham Dance Company</p>"],
+        "Images": [
+          "PeiJu_Chien-Pott_01.webp",
+          "PeiJu_Chien-Pott_02.webp",
+          "PeiJu_Chien-Pott_03.webp",
+          "PeiJu_Chien-Pott_04.webp",
+          "PeiJu_Chien-Pott_05.webp",
+          "PeiJu_Chien-Pott_06.webp"
+        ]
+      },
+      {
+        "Nom": "Stella Abrera",
+        "Description": [
+          "<p>Principal Dancer, American Ballet Theatre</p><p>\"If a child told me they wanted to be a dancer, I would tell them to work with determination and grit. Every day endeavor to reach your full potential. If you are not successful on a particular day, be proud of trying, and then get back in the saddle again the next day. And cross train.\"</p>"
+        ],
+        "Images": [
+          "Stella_Abrera_01.webp",
+          "Stella_Abrera_02.webp",
+          "Stella_Abrera_03.webp"
+        ]
+      },
+      {
+        "Nom": "Tiler Peck",
+        "Description": [
+          "<p>“I wish I knew how to take care of my body when I started dancing. Dance is an extremely physically demanding career and it is really important to be good to your body because it is your instrument.” - Tiler Peck, Principal dancer, New York City Ballet</p>"
+        ],
+        "Images": [
+          "Tiler_Peck_01.webp",
+          "Tiler_Peck_02.webp",
+          "Tiler_Peck_03.webp",
+          "Tiler_Peck_04.webp",
+          "Tiler_Peck_05.webp",
+          "Tiler_Peck_06.webp",
+          "Tiler_Peck_07.webp"
+        ]
+      },
+      {
+        "Nom": "Unity Phelan",
+        "Description": [
+          "<p>Unity Phelan Principal dancer New York City Ballet, NYCB</p>"
+        ],
+        "Images": ["Unity_Phelan_01.webp", "Unity_Phelan_02.webp"]
+      },
+      {
+        "Nom": "Veronika Part",
+        "Description": [""],
+        "Images": [
+          "Veronika_Part_01.webp",
+          "Veronika_Part_02.webp",
+          "Veronika_Part_03.webp"
+        ]
+      },
+      {
+        "Nom": "Xin Ying",
+        "Description": [
+          "<p>Xin Ying, Principal, Martha Graham Dance Company</p>"
+        ],
+        "Images": [
+          "Xin_Ying_01.webp",
+          "Xin_Ying_02.webp",
+          "Xin_Ying_03.webp",
+          "Xin_Ying_04.webp",
+          "Xin_Ying_05.webp"
+        ]
+      },
+      {
+        "Nom": "NYC Female Dancers",
+        "Description": [""],
+        "Images": [
+          "NYC_Female_Dancers_01.webp",
+          "NYC_Female_Dancers_02.webp",
+          "NYC_Female_Dancers_03.webp",
+          "NYC_Female_Dancers_04.webp",
+          "NYC_Female_Dancers_05.webp",
+          "NYC_Female_Dancers_06.webp",
+          "NYC_Female_Dancers_07.webp",
+          "NYC_Female_Dancers_08.webp",
+          "NYC_Female_Dancers_09.webp",
+          "NYC_Female_Dancers_10.webp",
+          "NYC_Female_Dancers_11.webp",
+          "NYC_Female_Dancers_12.webp",
+          "NYC_Female_Dancers_13.webp",
+          "NYC_Female_Dancers_14.webp",
+          "NYC_Female_Dancers_15.webp",
+          "NYC_Female_Dancers_16.webp",
+          "NYC_Female_Dancers_17.webp",
+          "NYC_Female_Dancers_18.webp",
+          "NYC_Female_Dancers_19.webp",
+          "NYC_Female_Dancers_20.webp",
+          "NYC_Female_Dancers_21.webp",
+          "NYC_Female_Dancers_22.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "Groupe": "Men",
+    "Dancers": [
+      {
+        "Nom": "MEN",
+        "Description": [""],
+        "Images": ["Men.webp"]
+      },
+      {
+        "Nom": "Abdiel",
+        "Description": [""],
+        "Images": ["Abdiel_01.webp", "Abdiel_02.webp"]
+      },
+      {
+        "Nom": "Artem Ovcharenko",
+        "Description": [
+          "<p>Principal dancer, Bolshoi Ballet</p><p>\"I believe that art has no boundaries! Our American tour was a mission of sorts: it was important to show that we, the Russian people, have the same sorrows and joys, that we are capable of strong emotions and high art, can expose the beauty of what we have inside us and are willing and eager to share it with the world.\"</p>"
+        ],
+        "Images": [
+          "Artem_Ovcharenko_01.webp",
+          "Artem_Ovcharenko_03.webp",
+          "Artem_Ovcharenko_04.webp"
+        ]
+      },
+      {
+        "Nom": "Barton Cowperthwaite",
+        "Description": [
+          "<p>Lar Lubovitch Dance Company</p><p>\"In all the dancer with whom I work, I look for an intuitive, poetic spark. It's something with which certain dancers automatically imbue their movement. Of course, my work requires extreme technical ability as well. But dance is, as I see it, a form of poetry for which physical prowness is merely a means but surely not an end. Dancers who get stuck emphasizing only the athletic aspect of dance seem to have only one note they strike repeatedly. They appear to be shouting all of the time. it's the difference between yelling and singing. Barton sings. It's a choice.\" - Lar Lubovitch, Artistic Director, Lar Lubovitch Dance Company</p>"
+        ],
+        "Images": [
+          "Barton_Cowperthwaite_01.webp",
+          "Barton_Cowperthwaite_02.webp",
+          "Barton_Cowperthwaite_04.webp"
+        ]
+      },
+      {
+        "Nom": "Calvin Royal",
+        "Description": [
+          "<p>Calvin Royal, Soloist, American Ballet Theatre</p><p>\"To be able to dance for a living is a pretty special gift\"</p>"
+        ],
+        "Images": ["Calvin_Royal_02.webp"]
+      },
+      {
+        "Nom": "Daniel Ulbricht",
+        "Description": [
+          "<p>\"I think there are a lot of good dancers out there who have good technique and presence but the ones who inspire me are the assured dancers. You can see they dance for themselves and the audience. They don't dance out of fear, they dance to share...\" - Daniel Ulbricht, Principal dancer, New York City Ballet</p>"
+        ],
+        "Images": [
+          "Daniel_Ulbricht_01.webp",
+          "Daniel_Ulbricht_02.webp",
+          "Daniel_Ulbricht_03.webp"
+        ]
+      },
+      {
+        "Nom": "Daniil Simkin",
+        "Description": [
+          "<p>\"Dance is very much in the flow, in the moment. Each performance on stage is unique and it will not repeat itself. That's why I love photography so much, because you can remember the moment. Photography freezes a moment in time, especially as it's very different than the fleeting work that dancers do, that's very ephemeral.\" - Daniil Simkin, Principal dancer, American Ballet Theatre</p>"
+        ],
+        "Images": ["Daniil_Simkin_02.webp", "Daniil_Simkin_08.webp"]
+      },
+      {
+        "Nom": "Evan McKie",
+        "Description": [""],
+        "Images": [
+          "Evan_McKie_01.webp",
+          "Evan_McKie_02.webp",
+          "Evan_McKie_03.webp"
+        ]
+      },
+      {
+        "Nom": "Garen Scribner",
+        "Description": [
+          "<p>\"When you're hungry, eat. When you're tired, sleep. When you hear music, dance.\" Garen Scribner, Broadway star, An American in Paris</p>"
+        ],
+        "Images": ["Garen_Scribner_01.webp", "Garen_Scribner_02.webp"]
+      },
+      {
+        "Nom": "James Whiteside",
+        "Description": [
+          "<p>Principal, American Ballet Theatre</p><p>\"My biggest mishap in a performance was years ago when I did Lysander in Balanchine's \"A Midsummer Night's Dream\" and my sword got caught in the front cloth in the lovers scene. I had to stand there for a full minute untangling it!\"</p>"
+        ],
+        "Images": ["James_Whiteside_01.webp", "James_Whiteside_02.webp"]
+      },
+      {
+        "Nom": "Jared Matthews",
+        "Description": [
+          "<p>Principal dancer with Houston Ballet</p><p>\"Gene Kelly is the reason I started dancing. He makes being a male dancer look like the coolest thing ever.\"</p>"
+        ],
+        "Images": ["Jared_Matthews_01.webp", "Jared_Matthews_02.webp"]
+      },
+      {
+        "Nom": "Julian MacKay",
+        "Description": [
+          "<p>First Soloist, Mikhailovsky Theatre</p><p>\"I grew up in Montana in the mountains, I first started dancing in our driveway! My inspiration was my sisters and the ABT DVD <em>\"Born to Be Wild.\"</em></p>"
+        ],
+        "Images": [
+          "Julian_MacKay_01.webp",
+          "Julian_MacKay_02.webp",
+          "Julian_MacKay_03.webp"
+        ]
+      },
+      {
+        "Nom": "Kleber Rebello",
+        "Description": [""],
+        "Images": [
+          "Kleber_Rebello_01.webp",
+          "Kleber_Rebello_02.webp",
+          "Kleber_Rebello_03.webp",
+          "Kleber_Rebello_04.webp",
+          "Kleber_Rebello_05.webp",
+          "Kleber_Rebello_06.webp"
+        ]
+      },
+      {
+        "Nom": "Lloyd Knight",
+        "Description": ["<p>Principal dancer, Martha Graham Dance Company</p>"],
+        "Images": ["Lloyd_Knight_02.webp", "Lloyd_Knight_02.webp"]
+      },
+      {
+        "Nom": "Marcelo Gomes",
+        "Description": [
+          "<p>\"Ever since I can remember, I always had a passion for dance. As a child, I made up my own choreography to songs by Madonna. It was in my DNA to dance. When I was five, I watched my sister's musical theatre class and asked to join in.\" - Marcelo Gomes, Principal dancer, American Ballet Theatre.</p>"
+        ],
+        "Images": ["Marcelo_Gomes_04.webp", "Marcelo_Gomes_05.webp"]
+      },
+      {
+        "Nom": "Michael Jackson Jr",
+        "Description": [
+          "<p>\"If I could be any animal, I would an eagle. I have always had long arms which often made me embarrassed and self conscious. Dance taught me to embrace and use them to speak the worlds I could not say.\" - Michael Jackson Jr, Alvin Ailey American Dance Theater</p>"
+        ],
+        "Images": ["Michael_Jackson_Jr_01.webp", "Michael_Jackson_Jr_02.webp"]
+      },
+      {
+        "Nom": "Michael Trusnovec",
+        "Description": [
+          "<p>Paul Taylor Dance Company</p><p>\"If I could have a coffee with anyone (dead or alive), it would be Fred Astaire, as he was such an influence on the way I live. His life, and the era he was alive and working, are fascinating to me.\"</p>"
+        ],
+        "Images": [
+          "Michael_Trusnovec_01.webp",
+          "Michael_Trusnovec_02.webp",
+          "Michael_Trusnovec_03.webp"
+        ]
+      },
+      {
+        "Nom": "Samuel Lee Roberts",
+        "Description": ["<p>Alvin Ailey American Dance Theater</p>"],
+        "Images": ["Samuel_Lee_Roberts_01.webp"]
+      },
+      {
+        "Nom": "Sebastian Vinet",
+        "Description": [
+          "<p>\"I wish I would have known how to be patient when I first started dance. Sometimes we put so much pressure on ourselves to 'get there', that we forget to enjoy the process.\" - Sebastian Vinet, Soloist, Compañía Ballet de Santiago</p>"
+        ],
+        "Images": [
+          "Sebastian_Vinet_01.webp",
+          "Sebastian_Vinet_02.webp",
+          "Sebastian_Vinet_03.webp",
+          "Sebastian_Vinet_04.webp"
+        ]
+      },
+      {
+        "Nom": "Xander Parish",
+        "Description": ["<p>Principal dancer, Mariinsky Ballet</p>"],
+        "Images": [
+          "Xander_Parish_01.webp",
+          "Xander_Parish_02.webp",
+          "Xander_Parish_03.webp",
+          "Xander_Parish_04.webp",
+          "Xander_Parish_05.webp"
+        ]
+      },
+      {
+        "Nom": "Zachary Catazaro",
+        "Description": [
+          "<p>Principal, New York City Ballet</p><p>\"My greatest indulgence is riding my motorcycle with no set destination.\"</p>"
+        ],
+        "Images": ["Zachary_Catazaro_02.webp", "Zachary_Catazaro_03.webp"]
+      },
+      {
+        "Nom": "NYC Male Dancers",
+        "Description": [""],
+        "Images": [
+          "NYC_Male_Dancers_01.webp",
+          "NYC_Male_Dancers_02.webp",
+          "NYC_Male_Dancers_03.webp",
+          "NYC_Male_Dancers_04.webp",
+          "NYC_Male_Dancers_05.webp",
+          "NYC_Male_Dancers_06.webp",
+          "NYC_Male_Dancers_07.webp",
+          "NYC_Male_Dancers_08.webp",
+          "NYC_Male_Dancers_09.webp",
+          "NYC_Male_Dancers_10.webp",
+          "NYC_Male_Dancers_11.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "Groupe": "Ensemble",
+    "Dancers": [
+      {
+        "Nom": "ENSEMBLE",
+        "Description": [""],
+        "Images": ["Ensemble.webp"]
+      },
+      {
+        "Nom": "Alvin Ailey dancers",
+        "Description": [""],
+        "Images": ["Alvin_Ailey_Dancers_01.webp"]
+      },
+      {
+        "Nom": "Cassandra Trenary",
+        "Description": [""],
+        "Images": ["Cassandra_Trenary_03.webp"]
+      },
+      {
+        "Nom": "Chase and Lauren",
+        "Description": [""],
+        "Images": ["Chase_and_Lauren.webp"]
+      },
+      {
+        "Nom": "Christine Shevchenko",
+        "Description": [""],
+        "Images": ["Christine_Shevchenko_04.webp"]
+      },
+      {
+        "Nom": "Eline and Daniil",
+        "Description": [""],
+        "Images": ["Eline_and_Daniil.webp"]
+      },
+      {
+        "Nom": "Isabella and Zach",
+        "Description": [""],
+        "Images": ["Isabella_and_Zach.webp"]
+      },
+      {
+        "Nom": "Isabelle and Lloyd",
+        "Description": [""],
+        "Images": ["Isabelle_and_Lloyd_01.webp", "Isabelle_and_Lloyd_02.webp"]
+      },
+      {
+        "Nom": "J-Green and Ailey Dancers",
+        "Description": [""],
+        "Images": ["J-Green_and_Ailey_Dancers.webp"]
+      },
+      {
+        "Nom": "Lloyd and Abdie",
+        "Description": [""],
+        "Images": [
+          "Lloyd_and_Abdie_01.webp",
+          "Lloyd_and_Abdie_02.webp",
+          "Lloyd_and_Abdie_03.webp"
+        ]
+      },
+      {
+        "Nom": "Michael Jackson Jr and Sean Carmon",
+        "Description": [""],
+        "Images": ["Michael_Jackson_Jr_and_Sean_Carmon_01.webp"]
+      },
+      {
+        "Nom": "Misty Copeland",
+        "Description": [""],
+        "Images": ["Misty_Copeland_09.webp"]
+      },
+      {
+        "Nom": "Nayara Lopes",
+        "Description": [""],
+        "Images": ["Nayara_Lopes_03.webp"]
+      },
+      {
+        "Nom": "Olga Smirnova",
+        "Description": [""],
+        "Images": ["Olga_Smirnova_01.webp", "Olga_Smirnova_02.webp"]
+      },
+      {
+        "Nom": "PeiJu and Lloyd",
+        "Description": [""],
+        "Images": ["PeiJu_and_Lloyd.webp"]
+      },
+      {
+        "Nom": "Robbie and Tiler",
+        "Description": [""],
+        "Images": ["Robbie_and_Tiler.webp"]
+      },
+      {
+        "Nom": "Sasha De Sola and Angelo Greco",
+        "Description": [""],
+        "Images": ["Sasha_De_Sola_and_Angelo_Greco_01.webp"]
+      }
+    ]
+  }
+]

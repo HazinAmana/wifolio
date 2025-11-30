@@ -1,0 +1,218 @@
+/* ===============================================
+  BLOC DE TEXTE
+  ===============================================
+
+  Bloc de texte affiché à gauche du grand carrousel (desktop)
+  ou en dessous (mobile). Contient la description du danseur.
+
+  STRUCTURE HTML ATTENDUE :
+  <div class="text-block">
+  <div class="text-block-header">
+  <h2>NYC DANCE PROJECT</h2>
+  </div>
+  <div class="text-block-scroll-wrapper">
+    <div class="text-block-content scroll-content">
+      <h3>Nom du danseur</h3>
+      <div class="text-block-description">
+      <!-- Description HTML depuis JSON -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  ⚠️ CRITIQUE : La hauteur max doit correspondre à celle du carrousel.
+
+  💡 MODIFIABLE : Couleurs, padding, largeurs.
+*/
+
+/* ===============================================
+  CONTENEUR PRINCIPAL
+  =============================================== */
+
+.text-block {
+  /* Dimensions - 💡 MODIFIABLE */
+  max-width: 70ch;
+  /* Largeur optimale pour la lecture */
+  width: 100%;
+
+  /* ⚠️ CRITIQUE : Hauteur max = hauteur du carrousel */
+  max-height: var(--carousel-main-height);
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  /* Style */
+  /* overflow: hidden; */
+}
+
+
+/* ===============================================
+  EN-TÊTE DU BLOC (titre principal)
+  =============================================== */
+
+.text-block-header {
+  /* 💡 MODIFIABLE */
+  padding: 0 var(--spacing-lg) var(--spacing-md) var(--spacing-lg);
+  flex-shrink: 0;
+  /* Ne pas rétrécir */
+}
+
+.text-block-header h2 {
+  margin: 0;
+  color: var(--color-gold);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+}
+
+
+/* ===============================================
+  WRAPPER DE SCROLL (Nouveau)
+  ===============================================
+  Contient le contenu scrollable..
+  Indispensable pour que le height: 100% fonctionne.
+*/
+.text-block-scroll-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  /* Important pour Firefox flexbox */
+}
+
+
+/* ===============================================
+  CONTENU SCROLLABLE
+  =============================================== */
+
+.text-block-content {
+  /* ⚠️ CRITIQUE : overflow-y auto pour activer le scroll */
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  /* Force la hauteur */
+
+  /* Style - 💡 MODIFIABLE */
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid var(--color-gold);
+  background-color: transparent;
+}
+
+/* ===============================================
+  TITRE DU DANSEUR (h3)
+  =============================================== */
+
+.text-block-content h3 {
+  /* 💡 MODIFIABLE */
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* ===============================================
+  DESCRIPTION (contenu HTML depuis JSON)
+  ===============================================
+
+  Styles par défaut pour le contenu de la description.
+  💡 Tous modifiables.
+*/
+
+.text-block-description {
+  max-width: 60ch;
+}
+
+.text-block-description p {
+  margin: 0 0 var(--spacing-lg) 0;
+  text-align: left;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+.text-block-description p:last-child {
+  margin-bottom: 0;
+}
+
+.text-block-description em {
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.text-block-description strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold);
+}
+
+
+/* ===============================================
+  ÉTAT VIDE (aucune sélection)
+  ===============================================
+
+  Message affiché quand aucun danseur n'est sélectionné.
+  💡 Complètement optionnel et modifiable.
+*/
+
+.text-block-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+
+/* ===============================================
+  RESPONSIVE
+  =============================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .text-block {
+    max-width: 100%;
+  }
+}
+
+/* Mobile : Le bloc passe sous le carrousel */
+@media (max-width: 768px) {
+  .text-block {
+    /* Hauteur auto sur mobile (pas de limite) */
+    max-height: none;
+    margin-top: var(--spacing-xl);
+    order: 1;
+    /* S'affiche après le carrousel */
+  }
+
+  .text-block-content {
+    /* Hauteur max réduite sur mobile */
+    max-height: 400px;
+  }
+
+  .text-block-header h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .text-block-content h3 {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+
+  .text-block-header,
+  .text-block-content {
+    padding-left: var(--spacing-md);
+    padding-right: calc(var(--spacing-md) + 12px);
+  }
+
+  .text-block-content {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,199 @@
+/* ===============================================
+  VARIABLES CSS GLOBALES
+  ===============================================
+
+  Ce fichier centralise toutes les variables CSS du projet.
+  Vous pouvez modifier ces valeurs pour personnaliser l'apparence
+  sans toucher aux autres fichiers CSS.
+
+  ⚠️ NE PAS SUPPRIMER ces variables car elles sont utilisées
+  dans tous les autres fichiers CSS.
+*/
+
+:root {
+  /* ===============================================
+  COULEURS PRINCIPALES
+  =============================================== */
+
+  /* Couleur dorée (accent principal) */
+  --color-gold: #9b8400;
+  --color-gold-dark: #5a4d00;
+  --color-gold-light: #c4a800;
+
+  /* Arrière-plans */
+  --color-bg-primary: #252525;
+  --color-bg-secondary: #1f1f1f;
+  --color-bg-tertiary: #313131;
+
+  /* Textes */
+  --color-text-primary: hsl(0, 0%, 90%);
+  --color-text-secondary: hsl(0, 0%, 70%);
+
+  /* Bordures */
+  --color-border: hsl(0, 0%, 34%);
+  --color-border-light: hsl(0, 0%, 40%);
+
+  /* Noir pur pour les images */
+  --color-black: #000000;
+
+  /* Overlays */
+  --color-overlay-dark: rgba(0, 0, 0, 0.7);
+  --color-overlay-medium: rgba(0, 0, 0, 0.4);
+  --color-overlay-light: rgba(0, 0, 0, 0.2);
+
+  /* ===============================================
+  ESPACEMENTS
+  =============================================== */
+
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
+  --spacing-3xl: 4rem;
+  /* 64px */
+
+  /* ===============================================
+  TYPOGRAPHIE
+  =============================================== */
+
+  --font-family-primary: "Helvetica", "Arial", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.5rem;
+  /* 24px */
+  --font-size-2xl: 1.7rem;
+  /* 27px */
+  --font-size-3xl: 2rem;
+  /* 32px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* ===============================================
+  DIMENSIONS DES CARROUSELS
+  =============================================== */
+
+  /* Premier carrousel (vignettes) */
+  --carousel-thumb-height: 320px;
+  /* Hauteur d'une ligne de vignettes */
+  --carousel-thumb-total-height: 640px;
+  /* Hauteur totale (2 lignes) */
+  --carousel-thumb-width: 200px;
+  /* Largeur d'une vignette */
+  --carousel-thumb-gap: 10px;
+  /* Espacement entre vignettes */
+
+  /* Deuxième carrousel (grande image) */
+  --carousel-main-height: 750px;
+  --carousel-main-max-width: 600px;
+
+  /* Vignettes sous le grand carrousel */
+  --carousel-main-thumb-size: 75px;
+
+  /* ===============================================
+  TRANSITIONS ET ANIMATIONS
+  ===============================================
+
+  💡 Vous pouvez modifier ces durées pour rendre
+  les animations plus rapides ou plus lentes.
+  =============================================== */
+
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 400ms;
+  --transition-very-slow: 600ms;
+
+  --timing-ease: ease;
+  --timing-ease-in-out: ease-in-out;
+  --timing-ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ===============================================
+  BREAKPOINTS RESPONSIVE
+  ===============================================
+
+  ⚠️ Ces valeurs sont utilisées dans les media queries.
+  Modifier avec précaution.
+  =============================================== */
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-desktop-lg: 1400px;
+
+  /* ===============================================
+  EFFETS ET FILTRES
+  =============================================== */
+
+  --grayscale-full: grayscale(100%);
+  --grayscale-half: grayscale(50%);
+  --grayscale-none: grayscale(0%);
+
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+
+  /* ===============================================
+  Z-INDEX LAYERS
+  ===============================================
+
+  Contrôle la superposition des éléments.
+  ⚠️ NE PAS MODIFIER sans comprendre l'impact.
+  =============================================== */
+
+  --z-base: 1;
+  --z-overlay: 10;
+  --z-navigation: 50;
+  --z-modal: 100;
+  --z-tooltip: 200;
+
+  /* ===============================================
+  SCROLLBAR CUSTOMISÉE
+  =============================================== */
+
+  --scrollbar-width: 10px;
+  --scrollbar-thumb-color: var(--color-gold);
+  --scrollbar-track-color: var(--color-gold-dark);
+  --scrollbar-border: 1px solid var(--color-gold);
+
+  /* ===============================================
+  BORDER RADIUS
+  ===============================================
+
+  💡 Modifiable pour ajuster les arrondis.
+  =============================================== */
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+
+  /* ===============================================
+  OMBRES
+  =============================================== */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+}

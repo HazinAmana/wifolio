@@ -1,7 +1,6 @@
+.MUSEUM/
 .sourcery/
 .vscode/
-.MUSEUM/
-maja/
+dancers/.OLD_FILES/
 documents/
 .gitignore
-

@@ -1,0 +1,294 @@
+/* ===============================================
+  STYLES DE BASE
+  ===============================================
+
+  Ce fichier contient les styles fondamentaux réutilisables
+  dans toute l'application : reset, typographie, layout général.
+
+  ⚠️ ATTENTION : Ne pas modifier les propriétés essentielles
+  (box-sizing, margin, padding sur html/body) qui pourraient
+  casser la mise en page.
+
+  💡 MODIFIABLE : Couleurs, tailles de police des titres,
+  marges des sections.
+*/
+
+/* ===============================================
+  RESET ET NORMALISATION
+  =============================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* ⚠️ NE PAS MODIFIER : nécessaire pour le scroll fluide */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* ⚠️ NE PAS MODIFIER : structure de layout flexbox critique */
+  display: flex;
+  flex-direction: column;
+
+  /* 💡 MODIFIABLE : Couleurs et typographie */
+  font-family: var(--font-family-primary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* ===============================================
+  TYPOGRAPHIE
+  ===============================================
+
+  💡 MODIFIABLE : Toutes les propriétés de cette section
+  peuvent être ajustées selon vos préférences.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-gold);
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-gold);
+  margin: var(--spacing-md) 0;
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin: var(--spacing-md) 0;
+}
+
+p {
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+em {
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* ===============================================
+  IMAGES
+  ===============================================
+
+  💡 MODIFIABLE : object-fit, border, padding selon vos besoins.
+  ⚠️ max-width: 100% est critique pour le responsive.
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================================
+  LISTES
+  =============================================== */
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================================
+  LIENS
+  =============================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-gold-light);
+}
+
+/* ===============================================
+  LAYOUT PRINCIPAL
+  ===============================================
+
+  Structure de la page : Header / Main / Footer
+
+  ⚠️ CRITIQUE : Ne pas modifier flex: 1 sur main,
+  sinon le footer ne restera pas en bas de page.
+*/
+
+/* Header - peut être personnalisé */
+header.nycDanceProject {
+  /* 💡 MODIFIABLE : couleurs, padding, bordures */
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-bottom: 2px solid var(--color-border);
+  width: 100%;
+}
+
+/* Main content - ⚠️ flex: 1 est CRITIQUE */
+main {
+  /* ⚠️ NE PAS MODIFIER flex: 1 */
+  flex: 1;
+
+  /* 💡 MODIFIABLE : padding, width */
+  width: 100%;
+  max-width: 1260px;
+  /* Limite la largeur maximale */
+  margin: 0 auto;
+  /* Centre le contenu */
+  padding: 0;
+}
+
+/* Footer - toujours en bas grâce au flexbox du body */
+footer {
+  /* 💡 MODIFIABLE : couleurs, padding, bordures */
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-top: 2px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* ===============================================
+  SECTIONS AVEC ENCARTS
+  ===============================================
+
+  Styles pour les conteneurs de carrousels.
+  💡 MODIFIABLE : marges, padding, bordures, couleurs.
+*/
+
+.section-encart {
+  margin: var(--spacing-xl) var(--spacing-lg);
+  align-items: flex-start;
+}
+
+/* ===============================================
+  SCROLLBAR CUSTOMISÉE (Webkit browsers)
+  ===============================================
+
+  💡 Les couleurs peuvent être modifiées via les variables.
+*/
+
+::-webkit-scrollbar {
+  height: var(--scrollbar-width);
+  width: 8px;
+  border: var(--scrollbar-border);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: var(--radius-none);
+  background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-none);
+  background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
+
+/* ===============================================
+  UTILITAIRES
+  ===============================================
+
+  Classes helper réutilisables.
+  💡 Ajouter vos propres classes utilitaires ici.
+*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ===============================================
+  LAYOUT SECTIONS - CAROUSEL MAIN
+  ===============================================
+
+  Layout pour la section du grand carrousel + texte.
+  💡 MODIFIABLE : gap, alignement, padding.
+*/
+
+.section-carousel-main {
+  /* Desktop: layout horizontal (texte à gauche, carrousel à droite) */
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+/* ===============================================
+  RESPONSIVE
+  ===============================================
+
+  Ajustements pour mobile.
+  💡 MODIFIABLE selon vos besoins.
+*/
+
+@media (max-width: 768px) {
+
+  header,
+  footer {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .section-encart {
+    margin: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-width: 3px;
+  }
+
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .section-carousel-main {
+    flex-direction: column;
+  }
+}

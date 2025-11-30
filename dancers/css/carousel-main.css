@@ -1,0 +1,310 @@
+/* ===============================================
+  DEUXIÈME CARROUSEL - GRANDE IMAGE + VIGNETTES
+  ===============================================
+
+  Affiche une grande image avec des vignettes en dessous
+  pour naviguer entre toutes les photos du danseur sélectionné.
+
+  STRUCTURE HTML ATTENDUE :
+  <div class="carousel-main">
+  <div class="carousel-main-viewer">
+  <img class="carousel-main-image" src="..." alt="...">
+  <div class="carousel-nav-band carousel-nav-prev">◄</div>
+  <div class="carousel-nav-band carousel-nav-next">►</div>
+  </div>
+  <div class="carousel-main-thumbnails">
+  <div class="carousel-main-thumb active">...</div>
+  <div class="carousel-main-thumb">...</div>
+  </div>
+  </div>
+
+  ⚠️ CRITIQUE : object-fit et dimensions fixées pour gérer
+  les images portrait/paysage sans redimensionner le cadre.
+
+  💡 MODIFIABLE : Tailles, couleurs, effets.
+*/
+
+/* ===============================================
+  CONTENEUR PRINCIPAL
+  =============================================== */
+
+.carousel-main {
+  /* Dimensions - 💡 MODIFIABLE */
+  width: 100%;
+  max-width: var(--carousel-main-max-width);
+  height: auto;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ===============================================
+  VIEWER - GRANDE IMAGE
+  ===============================================
+
+  ⚠️ CRITIQUE : Dimensions fixes pour éviter le redimensionnement
+  lors du passage d'images portrait à paysage.
+*/
+
+.carousel-main-viewer {
+  /* ⚠️ CRITIQUE : Hauteur fixe */
+  position: relative;
+  width: 100%;
+  height: var(--carousel-main-height);
+
+  /* Style - 💡 MODIFIABLE */
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gold);
+  overflow: hidden;
+
+  /* Centre l'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================================
+  GRANDE IMAGE
+  ===============================================
+
+  ⚠️ CRITIQUE : object-fit: contain pour afficher l'image
+  entière sans la rogner, qu'elle soit portrait ou paysage.
+*/
+
+.carousel-main-image {
+  /* ⚠️ CRITIQUE */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  /* 💡 MODIFIABLE */
+  padding: 6px;
+  background-color: var(--color-black);
+
+  /* Animation lors du changement d'image */
+  animation: fadeIn var(--transition-normal) var(--timing-ease);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===============================================
+  BANDES DE NAVIGATION (style DP Review)
+  ===============================================
+
+  Identiques au premier carrousel mais adaptées au viewer.
+  Réutilise les styles .carousel-nav-band de carousel-thumbnails.css
+*/
+
+.carousel-main-viewer .carousel-nav-band {
+  /* Hérite des styles de base */
+  /* Ajustements spécifiques au viewer */
+  width: 60px;
+}
+
+/* ===============================================
+  CONTENEUR DES VIGNETTES (en dessous)
+  ===============================================
+
+  Bande horizontale scrollable avec les vignettes des images.
+*/
+
+.carousel-main-thumbnails {
+  /* ⚠️ CRITIQUE : overflow-x pour le scroll */
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+  width: 100%;
+  overflow-x: auto;
+  padding: var(--spacing-sm) 0;
+
+  /* Scrollbar style */
+  /* scrollbar-width: thin; */
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-gold) var(--color-gold-dark);
+}
+
+/* ===============================================
+  VIGNETTE SOUS LE GRAND CARROUSEL
+  ===============================================
+
+  Petites vignettes pour naviguer entre images.
+  💡 Toutes les propriétés sont modifiables.
+*/
+
+.carousel-main-thumb {
+  /* ⚠️ CRITIQUE : flex-shrink pour éviter la réduction */
+  flex-shrink: 0;
+
+  /* Dimensions - 💡 MODIFIABLE */
+  width: var(--carousel-main-thumb-size);
+  height: var(--carousel-main-thumb-size);
+
+  /* Style */
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gold);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  /* Effet grayscale - ⚠️ IMPORTANT pour le design */
+  filter: var(--grayscale-half);
+  transition: filter var(--transition-normal) var(--timing-ease),
+    border-color var(--transition-normal) var(--timing-ease),
+    transform var(--transition-fast) var(--timing-ease);
+}
+
+/* Hover : enlève le grayscale */
+.carousel-main-thumb:hover {
+  filter: var(--grayscale-none);
+  transform: scale(1.05);
+}
+
+/* Vignette active : sans grayscale + bordure accentuée */
+.carousel-main-thumb.active {
+  filter: var(--grayscale-none);
+  border-color: var(--color-gold-light);
+  border-width: 2px;
+  box-shadow: 0 0 10px rgba(155, 132, 0, 0.6);
+}
+
+/* ===============================================
+  IMAGE DANS LA VIGNETTE
+  =============================================== */
+
+.carousel-main-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===============================================
+  NAVIGATION AVEC CLAVIER
+  ===============================================
+
+  Amélioration de l'accessibilité.
+*/
+
+.carousel-main-thumb:focus {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+
+/* ===============================================
+  ÉTATS DE CHARGEMENT
+  ===============================================
+
+  Affichage pendant le chargement des images.
+  💡 Optionnel, peut être personnalisé.
+*/
+
+.carousel-main-image.loading {
+  opacity: 0.5;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ===============================================
+  COMPTEUR D'IMAGES (optionnel)
+  ===============================================
+
+  Affiche "Image X/Y" au-dessus de la grande image.
+  💡 Complètement optionnel et modifiable.
+*/
+
+.carousel-main-counter {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-overlay-dark);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: var(--radius-sm);
+
+  color: var(--color-gold);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  font-family: monospace;
+
+  z-index: var(--z-overlay);
+  pointer-events: none;
+}
+
+/* ===============================================
+  RESPONSIVE
+  ===============================================
+
+  Ajustements pour différentes tailles d'écran.
+  💡 MODIFIABLE selon vos besoins.
+*/
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --carousel-main-height: 600px;
+    --carousel-main-thumb-size: 65px;
+  }
+
+  .carousel-main-viewer .carousel-nav-band {
+    width: 50px;
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --carousel-main-height: 500px;
+    --carousel-main-max-width: 100%;
+    --carousel-main-thumb-size: 55px;
+  }
+
+  .carousel-main-viewer .carousel-nav-band {
+    width: 40px;
+    font-size: var(--font-size-lg);
+  }
+
+  .carousel-main-viewer .carousel-arrow {
+    display: none;
+  }
+
+  .carousel-main-counter {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: 0.65rem;
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+  :root {
+    --carousel-main-height: 400px;
+    --carousel-main-thumb-size: 50px;
+  }
+}

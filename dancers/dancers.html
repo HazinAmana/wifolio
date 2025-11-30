@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie de danseurs professionnels - NYC Dance Project">
+  <title>Galerie de Danseurs - NYC Dance Project</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/dancers.css">
+</head>
+
+<body>
+
+  <!-- ===============================================
+        HEADER
+        ===============================================
+  -->
+  <header class="nycDanceProject">
+    <h1>NYC Dance Project</h1>
+    <p>Discover Professional Dancers from Around the World</p>
+  </header>
+
+
+  <!-- ===============================================
+        MAIN CONTENT
+        =============================================== -->
+  <main>
+
+    <!-- ===============================================
+          SECTION 1 : CARROUSEL DE VIGNETTES
+          ===============================================
+    -->
+    <section class="section-encart section-carousel-thumbnails">
+      <div class="carousel-thumbnails" id="thumbnailCarousel">
+
+        <!-- Conteneur principal scrollable -->
+        <div class="carousel-thumbnails-container" id="carouselContainer">
+          <!-- Grille générée par JS -->
+          <div class="carousel-grid" id="carouselGrid"></div>
+        </div>
+
+        <!-- Bandes de navigation -->
+        <div class="carousel-nav-band carousel-nav-prev" id="thumbNavPrev">
+          <span>◄</span>
+        </div>
+        <div class="carousel-nav-band carousel-nav-next" id="thumbNavNext">
+          <span>►</span>
+        </div>
+
+        <!-- Indicateur de page (X/Y) -->
+        <div class="page-indicator" id="pageIndicator">1/1</div>
+
+      </div>
+    </section>
+
+
+    <!-- ===============================================
+          SECTION 2 : GRAND CARROUSEL + TEXTE
+          ===============================================
+    -->
+    <section class="section-encart section-carousel-main">
+
+      <!-- Bloc de texte (gauche sur desktop, dessous sur mobile) -->
+      <div class="text-block" id="textBlock">
+        <div class="text-block-header">
+          <h2>NYC DANCE PROJECT</h2>
+        </div>
+
+        <div class="text-block-scroll-wrapper">
+          <div class="text-block-content scroll-content" id="textContent">
+            <!-- Contenu ajouté dynamiquement avec scrollbar -->
+            <div class="text-block-empty">
+              <p>Sélectionnez un danseur pour afficher sa description</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grand carrousel (droite sur desktop) -->
+      <div class="carousel-main" id="mainCarousel">
+
+        <!-- Viewer de la grande image -->
+        <div class="carousel-main-viewer" id="mainViewer">
+
+          <!-- Grande image (ajoutée dynamiquement) -->
+          <img class="carousel-main-image" id="mainImage" src="" alt="Dancer image" style="display: none;">
+
+          <!-- Message par défaut -->
+          <div class="text-block-empty" id="mainPlaceholder">
+            <p>Cliquez sur une vignette pour voir les photos</p>
+          </div>
+
+          <!-- Bandes de navigation -->
+          <div class="carousel-nav-band carousel-nav-prev" id="mainNavPrev" style="display: none;">
+            <span>◄</span>
+          </div>
+          <div class="carousel-nav-band carousel-nav-next" id="mainNavNext" style="display: none;">
+            <span>►</span>
+          </div>
+
+          <!-- Compteur d'images -->
+          <div class="carousel-main-counter" id="mainCounter" style="display: none;">
+            1/1
+          </div>
+
+        </div>
+
+
+        <!-- Bande de vignettes sous le grand carrousel -->
+        <div class="carousel-main-thumbnails" id="mainThumbnails">
+          <!-- Vignettes ajoutées dynamiquement par JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ===============================================
+        FOOTER
+        ===============================================
+  -->
+  <footer>
+    <p>&copy; 2025 NYC Dance Project. All rights reserved.</p>
+    <p>Photos by Ken Browar and Deborah Ory</p>
+  </footer>
+
+
+  <!-- ===============================================
+        SCRIPTS JAVASCRIPT
+        ===============================================
+  -->
+
+  <!-- Chargement des données JSON -->
+  <script src="js/data-loader.js"></script>
+
+  <!-- Modules des carrousels -->
+  <script src="js/carousel-thumbnails.js"></script>
+  <script src="js/carousel-main.js"></script>
+
+  <!-- Bloc de texte -->
+  <script src="js/text-block.js"></script>
+
+  <!-- Script principal (orchestration) -->
+  <script src="js/dancers.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+/* ===============================================
+  DANCERS GALLERY - FICHIER CSS PRINCIPAL
+  ===============================================
+
+  Ce fichier importe tous les modules CSS du projet.
+
+  ORDRE D'IMPORT IMPORTANT :
+  1. Variables (doivent être chargées en premier)
+  2. Base (reset et styles globaux)
+  3. Modules spécifiques (carrousels, texte)
+
+  ⚠️ NE PAS MODIFIER L'ORDRE des imports.
+
+  💡 Pour personnaliser le style, modifiez les fichiers
+  correspondants, pas ce fichier.
+*/
+
+/* Variables CSS globales - ⚠️ DOIT ÊTRE EN PREMIER */
+@import url("variables.css");
+
+/* Styles de base et layout - ⚠️ DOIT ÊTRE EN DEUXIÈME */
+@import url("base.css");
+
+/* Modules - L'ordre peut être modifié */
+@import url("carousel-thumbnails.css");
+@import url("carousel-main.css");
+@import url("text-block.css");
+
+/* ===============================================
+  STYLES ADDITIONNELS SPÉCIFIQUES
+  ===============================================
+
+  Ajoutez ici les styles supplémentaires qui ne rentrent
+  dans aucun des modules ci-dessus.
+*/
+
+/* Styles spécifiques non couverts par les modules */
