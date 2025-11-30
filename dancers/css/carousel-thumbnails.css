@@ -181,7 +181,7 @@
 .carousel-nav-band {
   position: absolute;
   top: 0;
-  height: calc(100% - 26px);
+  height: calc(100%);
   width: 60px;
   background-color: var(--color-overlay-light);
   backdrop-filter: blur(2px);
