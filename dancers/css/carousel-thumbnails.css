@@ -27,7 +27,7 @@
   position: relative;
   width: 100%;
   height: var(--carousel-thumb-total-height);
-  padding: 0 .5rem 0 .5rem;
+  padding: 0 0.5rem 0 0.5rem;
   background-color: var(--color-bg-tertiary);
   border: 1px solid var(--color-gold);
   overflow: hidden;
@@ -102,7 +102,7 @@
 }
 
 .thumbnail-group-column:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   right: calc(-1 * var(--spacing-xl) / 2);
   top: 10%;
@@ -200,7 +200,7 @@
   pointer-events: auto;
 }
 
-.carousel-nav-band>* {
+.carousel-nav-band > * {
   pointer-events: none;
 }
 
@@ -270,5 +270,9 @@
   .carousel-nav-band {
     width: 40px;
     font-size: var(--font-size-xl);
+  }
+
+  .page-indicator {
+    bottom: 22px;
   }
 }
