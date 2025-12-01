@@ -46,12 +46,6 @@ function initTextBlock() {
     updateText(event.detail.nom, event.detail.description);
   });
 
-  // // Initialiser la scrollbar manuellement
-  // const scrollWrapper = document.querySelector('.text-block-scroll-wrapper');
-  // if (scrollWrapper && typeof window.initCurvedScrollbar === 'function') {
-  //   console.log('📜 Initialisation manuelle de la scrollbar ...');
-  //   window.initCurvedScrollbar(scrollWrapper);
-  // }
 
   console.log('✅ Bloc de texte initialisé');
 }

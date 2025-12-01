@@ -17,6 +17,8 @@
   --carousel-thumb-height: 340px;
   /* Hauteur totale incluant les 2 lignes + gap + padding */
   --carousel-thumb-total-height: 720px;
+  /* Utilisé pour la couleur de fond du carrousel, voir variables.css */
+  --carousel-thumbnails-bg: var(--color-bg-tertiary);
 }
 
 /* ===============================================
@@ -28,7 +30,9 @@
   width: 100%;
   height: var(--carousel-thumb-total-height);
   padding: 0 0.5rem 0 0.5rem;
-  background-color: var(--color-bg-tertiary);
+  background-color: var(
+    --carousel-thumbnails-bg
+  ); /* Utilisation de la variable */
   border: 1px solid var(--color-gold);
   overflow: hidden;
   z-index: 1;
@@ -38,7 +42,7 @@
   CONTENEUR SCROLLABLE (GRID)
   =============================================== */
 
-.carousel-thumbnails-container {
+/* .carousel-thumbnails-container {
   width: 100%;
   height: calc(100% - 8px);
   overflow-x: auto;
@@ -68,6 +72,55 @@
 
 .carousel-thumbnails-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-gold-light);
+} */
+
+.carousel-thumbnails-container {
+  width: 100%;
+  height: calc(100% - 8px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  /* Utilisation des variables globales pour la scrollbar */
+  scrollbar-width: var(--scrollbar-width);
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+.carousel-thumbnails-container::-webkit-scrollbar {
+  height: var(--scrollbar-height); /* 10px */
+}
+
+.carousel-thumbnails-container::-webkit-scrollbar-track {
+  /* background: var(--scrollbar-track-color);
+  border-radius: var(--radius-none); */
+  background: var(--scrollbar-track-color) !important;
+  border-radius: 0 !important;
+}
+
+.carousel-thumbnails-container::-webkit-scrollbar-thumb {
+  /* background-color: var(--scrollbar-thumb-color);
+  border-radius: var(--radius-none); */
+  background-color: var(--scrollbar-thumb-color) !important;
+  border-radius: 0 !important;
+  min-width: 10px;
+  min-height: 10px;
+  transition: background-color 0.2s;
+}
+
+.carousel-thumbnails-container::-webkit-scrollbar-thumb:hover {
+  /* background-color: var(--color-gold-light); */
+  background-color: var(--color-gold-light) !important;
+  border-radius: 0 !important;
+}
+
+/* Firefox */
+.carousel-thumbnails-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
 }
 
 /* ===============================================
@@ -214,10 +267,10 @@
     --carousel-thumb-total-height: 460px;
   }
 
-  .carousel-nav-band {
+  /* .carousel-nav-band {
     width: 40px;
     font-size: var(--font-size-xl);
-  }
+  } */
 
   .page-indicator {
     bottom: 22px;

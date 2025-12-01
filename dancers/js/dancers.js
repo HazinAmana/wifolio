@@ -13,8 +13,7 @@
   2. carousel-thumbnails.js
   3. carousel-main.js
   4. text-block.js
-  5. scrollbar/scrollbarScript.js => SUPPRIMÉ
-  6. dancers.js (ce fichier)
+  5. dancers.js (ce fichier)
 
   ⚠️ CRITIQUE : L'ordre de chargement des scripts est important.
 

@@ -20,7 +20,7 @@
 // ÉLÉMENTS DOM
 // ===============================================
 
-let carouselContainer, carouselGrid, thumbNavPrev, thumbNavNext, pageIndicator;
+let carouselContainer, carouselGrid, pageIndicator;
 let thumbnailCarousel;
 
 // ===============================================
@@ -51,11 +51,11 @@ function initThumbnailCarousel() {
   carouselGrid = document.getElementById("carouselGrid");
   console.log("  - carouselGrid:", carouselGrid);
 
-  thumbNavPrev = document.getElementById("thumbNavPrev");
-  console.log("  - thumbNavPrev:", thumbNavPrev);
+  // thumbNavPrev = document.getElementById("thumbNavPrev");
+  // console.log("  - thumbNavPrev:", thumbNavPrev);
 
-  thumbNavNext = document.getElementById("thumbNavNext");
-  console.log("  - thumbNavNext:", thumbNavNext);
+  // thumbNavNext = document.getElementById("thumbNavNext");
+  // console.log("  - thumbNavNext:", thumbNavNext);
 
   pageIndicator = document.getElementById("pageIndicator");
   console.log("  - pageIndicator:", pageIndicator);
@@ -66,8 +66,8 @@ function initThumbnailCarousel() {
   }
 
   // Event listeners pour la navigation
-  console.log("  - Appel de setupNavigationListeners()...");
-  setupNavigationListeners();
+  // console.log("  - Appel de setupNavigationListeners()...");
+  // setupNavigationListeners();
 
   // Event listeners pour le scroll (mise à jour pagination)
   console.log("  - Appel de setupScrollListener()...");

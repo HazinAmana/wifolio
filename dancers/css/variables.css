@@ -24,6 +24,7 @@
   --color-bg-primary: #252525;
   --color-bg-secondary: #1f1f1f;
   --color-bg-tertiary: #313131;
+  --carousel-thumbnails-bg: var(--color-bg-tertiary);
 
   /* Textes */
   --color-text-primary: hsl(0, 0%, 90%);

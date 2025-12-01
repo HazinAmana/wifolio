@@ -205,8 +205,6 @@ footer {
 */
 
 ::-webkit-scrollbar {
-  /* height: var(--scrollbar-width);
-  width: 10px; */
   height: var(--scrollbar-height);
   width:  var(--scrollbar-width);
   border: var(--scrollbar-border);
