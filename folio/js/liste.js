@@ -114,7 +114,8 @@ function render() {
           <td>${p.category}</td>
           <td>${p.location}</td>
           <td>${p.date}</td>
-          <td><a href="${p.url}" target="_blank" rel="noopener">Voir</a></td>
+          // <td><a href="${p.url}">Voir</a></td> => remplacer par lien fixe ci-dessous, tant que les pages ne sont pas créées
+          <td><a href="shopping-mall.html">Voir</a></td>
         </tr>
       `
     )
