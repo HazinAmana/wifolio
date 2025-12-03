@@ -65,6 +65,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 0.5rem 0;
+  margin: 0;
 }
 
 .nav-desktop > ul li:hover .submenu {
@@ -80,11 +81,11 @@
 }
 
 .submenu li {
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   white-space: nowrap;
   text-align: left;
   width: 100%;
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
 .submenu li:last-child {
@@ -208,7 +209,7 @@ a.border-reveal.active::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 
   /* Masqué par défaut pour l'accessibilité */
   visibility: hidden;
@@ -227,13 +228,14 @@ a.border-reveal.active::after {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  /* gap: 1rem; */
 }
 
 .nav-mobile li {
   opacity: 0;
   transform: translateX(20px);
   animation: slideInRight 0.5s ease forwards;
+  margin: 2rem 0 0 0;
 }
 
 /* Animation décalée pour chaque élément */
@@ -261,7 +263,7 @@ a.border-reveal.active::after {
 }
 
 .nav-mobile ~ .submenu ~ li {
-  padding: 0 2rem 0 2rem;
+  /* padding: 0 0 0 5rem; */
   font-size: .8rem;
   border: none;
 }
@@ -271,17 +273,22 @@ a.border-reveal.active::after {
   color: light-dark(var(--grey-850), var(--grey-050));
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
   display: block;
 }
 
 .nav-mobile a:hover,
-.nav-mobile a:focus {
+.nav-mobile a:focus,
+.nav-mobile a:active {
   color: light-dark(var(--grey-050), var(--grey-850));
   background-color: var(--accent-color);
-  transform: translateX(8px);
+  /* transform: translateX(8px); */
+}
+
+.nav-mobile .submenu a {
+  margin: 0 0 0 1.5rem;
 }
 
 /* Overlay pour fermer le menu en cliquant à l'extérieur */

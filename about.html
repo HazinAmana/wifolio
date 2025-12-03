@@ -21,7 +21,7 @@
       <!-- Navigation desktop -->
       <nav class="nav-desktop" aria-label="Navigation principale">
         <ul>
-          <li><a class="active border-reveal" aria-current="page" href="index.html">Accueil</a></li>
+          <li><a class="border-reveal" aria-current="page" href="index.html">Accueil</a></li>
           <li><a class="border-reveal" href="folio/featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
             <ul class="submenu">
               <li><a href="folio/projects.html">Tous les Projets</a></li>
@@ -31,11 +31,11 @@
           </li>
           <li><a class="border-reveal" href="#">Websites&nbsp;<span class="deroulant">▼</span></a>
             <ul class="submenu">
-              <li><a href="books/booksGallery.html">Livres</a></li>
+              <li><a href="books/booksIndex.html">Livres</a></li>
               <li><a href="dancers/dancers.html">Dancers</a></li>
             </ul>
           </li>
-          <li><a class="border-reveal" aria-current="page" href="about.html">About</a></li>
+          <li><a class="active border-reveal" aria-current="page" href="about.html">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +74,7 @@
   <!-- MENU MOBILE -->
   <nav class="nav-mobile" id="mobile-nav" aria-label="Menu de navigation mobile" role="dialog" aria-labelledby="hamburger-btn">
     <ul>
-      <li><a class="active" aria-current="page" href="index.html">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="folio/featured.html">Portfolio &ensp;</a>
         <ul class="submenu">
           <li><a href="folio/projects.html">Tous les Projets</a></li>
@@ -88,7 +88,7 @@
           <li><a href="dancers/dancers.html">Dancers</a></li>
         </ul>
       </li>
-      <li><a href="about.html">About</a></li>
+      <li><a class="active" aria-current="page" href="about.html">About</a></li>
     </ul>
   </nav>
 
@@ -97,8 +97,8 @@
 
   <main>
     <section class="hero">
-      <h1>Showcase</h1>
-      <!--      <hr />
+      <h1>Sources</h1>
+      <hr />
 
       <div class="classicBox">
         <h2>Implementing theme toggles was never easier</h2>
@@ -139,27 +139,27 @@ const theme = localStorage.getItem('theme');
 if (theme) {
   document.documentElement.setAttribute('data-theme', theme);
 }
-</code></pre> -->
-      <!-- </div> -->
+  </code></pre>
+      </div>
 
       <!-- <div class="card">
-        <h2>Contenu mixte</h2>
-        <p>Ce contenu démontre comment différents éléments réagissent au changement de thème. Les couleurs, bordures et ombres s'adaptent automatiquement.</p>
-        <button class="button">Action principale</button>
-      </div> -->
+          <h2>Contenu mixte</h2>
+          <p>Ce contenu démontre comment différents éléments réagissent au changement de thème. Les couleurs, bordures et ombres s'adaptent automatiquement.</p>
+          <button class="button">Action principale</button>
+        </div> -->
 
       <!-- <div class="card">
-        <h2>Informations</h2>
-        <p>Le thème est persistant grâce au localStorage et respecte les préférences système de l'utilisateur par défaut.</p>
-        <div class="btnStatus">Thème: Auto-détection</div>
-      </div> -->
+          <h2>Informations</h2>
+          <p>Le thème est persistant grâce au localStorage et respecte les préférences système de l'utilisateur par défaut.</p>
+          <div class="btnStatus">Thème: Auto-détection</div>
+        </div> -->
 
-      <!-- </div> -->
+    </div>
 
 
-      <!-- <hr />
+    <hr />
     <div class="card center">
-      <h2>PukaWakemi</h2>
+      <h2>PukaWakemi Portfolio</h2>
       <p>Projet librement inspiré du travail de <strong>Aker</strong> pour <em>microfolio</em>.</p>
       <ul class="boiteLiens">
         <li class="nomLiens"><a href="https://aker-dev.github.io/microfolio/" target="_blank">Site de Démo</a></li>
@@ -169,7 +169,7 @@ if (theme) {
         <button class="button">Voir le Projet</button>
       </a>
     </div>
-    <hr /> -->
+    <hr />
   </main>
 
   <social-footer></social-footer>

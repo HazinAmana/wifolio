@@ -72,7 +72,7 @@ h1 {
   font-size: var(--font-size-2xl);
   color: var(--color-gold);
   text-align: center;
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-md) 0 var(--spacing-md) 0;
 }
 
 h2 {
@@ -151,13 +151,23 @@ a:hover {
 */
 
 /* Header - peut être personnalisé */
-header.nycDanceProject {
   /* 💡 MODIFIABLE : couleurs, padding, bordures */
+/* header.nycDanceProject {
   background: var(--color-bg-secondary);
   padding: var(--spacing-lg) var(--spacing-xl);
   border-bottom: 2px solid var(--color-border);
   width: 100%;
+} */
+
+
+
+/* --------------------------------------- */
+
+.theme-toggle {
+  visibility: hidden;
 }
+
+/* --------------------------------------- */
 
 /* Main content - ⚠️ flex: 1 est CRITIQUE */
 main {
@@ -206,7 +216,7 @@ footer {
 
 ::-webkit-scrollbar {
   height: var(--scrollbar-height);
-  width:  var(--scrollbar-width);
+  width: var(--scrollbar-width);
   border: var(--scrollbar-border);
 }
 
@@ -277,7 +287,6 @@ footer {
 */
 
 @media (max-width: 768px) {
-
   header,
   footer {
     padding: var(--spacing-md) var(--spacing-lg);

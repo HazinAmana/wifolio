@@ -7,6 +7,9 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="description" content="Galerie de danseurs professionnels - NYC Dance Project">
   <title>Galerie de Danseurs - NYC Dance Project</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../folio/css/styles.css" />
+  <link rel="stylesheet" href="../folio/css/hamburger.css">
   <link rel="stylesheet" href="css/dancers.css">
 </head>
 
@@ -16,10 +19,95 @@
         HEADER
         ===============================================
   -->
-  <header class="nycDanceProject text-center">
+  <!-- <header class="nycDanceProject text-center">
     <h1>NYC Dance Project</h1>
     <p>Discover Professional Dancers from Around the World</p>
+  </header> -->
+
+  <!-- HEADER AVEC NAVIGATION -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo/Brand -->
+      <a href="../index.html" class="logo">Dancers</a>
+
+      <!-- Navigation desktop -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <ul>
+          <li><a class="border-reveal" aria-current="page" href="../index.html">Accueil</a></li>
+          <li><a class="border-reveal" href="../folio/featured.html">Portfolio&nbsp;<span class="deroulant">▼</span></a>
+            <ul class="submenu">
+              <li><a href="../folio/projects.html">Tous les Projets</a></li>
+              <li><a href="../folio/liste.html">Liste des Projets</a></li>
+              <li><a href="../folio/map.html">Carte des Projets</a></li>
+            </ul>
+          </li>
+          <li><a class="border-reveal" href="#">Websites&nbsp;<span class="deroulant">▼</span></a>
+            <ul class="submenu">
+              <li><a href="../books/booksIndex.html">Livres</a></li>
+              <li><a class="active aria-current=" page" " href=" ../dancers/dancers.html">Dancers</a></li>
+            </ul>
+          </li>
+          <li><a class="border-reveal" href="../../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton hamburger pour mobile -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-haspopup="true" aria-controls="mobile-nav">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+
+      <!-- Bouton Toggle Classic -->
+      <button class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+        <span class="theme-toggle-sr">Toggle theme</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="2em" height="2em" fill="var(--accent-color)" stroke-linecap="round" class="theme-toggle__classic" viewBox="0 0 32 32">
+          <clipPath id="theme-toggle__classic__cutout">
+            <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
+          </clipPath>
+          <g clip-path="url(#theme-toggle__classic__cutout)">
+            <circle cx="16" cy="16" r="9.34" />
+            <g stroke="var(--accent-color)" stroke-width="1.5">
+              <path d="M16 5.5v-4" />
+              <path d="M16 30.5v-4" />
+              <path d="M1.5 16h4" />
+              <path d="M26.5 16h4" />
+              <path d="m23.4 8.6 2.8-2.8" />
+              <path d="m5.7 26.3 2.9-2.9" />
+              <path d="m5.8 5.8 2.8 2.8" />
+              <path d="m23.4 23.4 2.9 2.9" />
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <!-- MENU MOBILE -->
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Menu de navigation mobile" role="dialog" aria-labelledby="hamburger-btn">
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../folio/featured.html">Portfolio &ensp;</a>
+        <ul class="submenu">
+          <li><a href="../folio/projects.html">Tous les Projets</a></li>
+          <li><a href="../folio/liste.html">Liste des Projets</a></li>
+          <li><a href="../folio/map.html">Carte des Projets</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Websites</a>
+        <ul class="submenu">
+          <li><a href="../books/booksIndex.html">Books</a></li>
+          <li><a class="active" aria-current="page" href="dancers.html">Dancers</a></li>
+        </ul>
+      </li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay pour fermer le menu -->
+  <div class="nav-overlay" id="nav-overlay"></div>
 
 
   <!-- ===============================================
@@ -55,8 +143,9 @@
 
       <!-- Bloc de texte (gauche sur desktop, dessous sur mobile) -->
       <div class="text-block" id="textBlock">
-        <div class="text-block-header">
-          <h2>NYC DANCE PROJECT</h2>
+        <div class="text-block-header text-center">
+          <h1>NYC DANCE PROJECT</h1>
+          <p>Discover Professional Dancers from Around the World</p>
         </div>
 
         <div class="text-block-scroll-wrapper">
@@ -114,16 +203,20 @@
         FOOTER
         ===============================================
   -->
-  <footer>
+  <!-- <footer>
     <p>&copy; 2025 NYC Dance Project. All rights reserved.</p>
     <p>Photos by Ken Browar and Deborah Ory</p>
-  </footer>
+  </footer> -->
 
 
   <!-- ===============================================
         SCRIPTS JAVASCRIPT
         ===============================================
   -->
+
+  <social-footer></social-footer>
+  <script src="../folio/js/social-footer.js"></script>
+  <script src="../folio/js/hamburger.js"></script>
 
   <!-- Chargement des données JSON -->
   <script src="js/data-loader.js"></script>
