@@ -40,7 +40,18 @@ function openMenu() {
     link.removeAttribute("aria-current");
 
     // On compare l'URL du lien (link.href est absolu) avec l'URL courante
-    if (link.href === currentUrl) {
+    // MODIFICATION: Utilisation de pathname pour ignorer les hash et query params
+    // et vérification que ce n'est pas un toggle de sous-menu
+    const isDropdownToggle = link.nextElementSibling && link.nextElementSibling.classList.contains('submenu');
+
+    // On nettoie les chemins pour la comparaison (enlever le slash de fin si présent)
+    const currentPath = window.location.pathname.replace(/\/$/, "") || "/index.html";
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "") || "/index.html";
+
+    // Cas spécial pour la racine/index
+    const isHome = (currentPath === "/index.html" || currentPath === "/") && (linkPath === "/index.html" || linkPath === "/");
+
+    if (!isDropdownToggle && (linkPath === currentPath || isHome)) {
       link.classList.add("active");
       link.setAttribute("aria-current", "page"); // Bonnes pratiques d'accessibilité
       indexToFocus = index;
