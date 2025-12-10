@@ -343,6 +343,10 @@ p {
   text-wrap: pretty;
 }
 
+.footer-text {
+  margin-inline: auto;
+}
+
 li {
   list-style: none;
 }
